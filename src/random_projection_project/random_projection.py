@@ -50,13 +50,10 @@ class RandomProjection:
     def gaussian_random_projection(self, X, k):
         d = len(X[0])
 
-        # Gaussian matrix
         R = [[random.gauss(0, 1) for _ in range(k)] for _ in range(d)]
 
-        # Scale
         R = self.scale_matrix(R, k)
 
-        # Project: X * R
         X_proj = []
         for row in X:
             projected_row = []
@@ -82,14 +79,13 @@ class RandomProjection:
 
         R = self.scale_matrix(R, k)
 
-        # Project
         X_proj = []
         for row in X:
             projected_row = []
             for j in range(k):
                 s_val = 0.0
                 for i in range(d):
-                    if R[i][j] != 0:  # skip zeros
+                    if R[i][j] != 0:
                         s_val += row[i] * R[i][j]
                 projected_row.append(s_val)
             X_proj.append(projected_row)
