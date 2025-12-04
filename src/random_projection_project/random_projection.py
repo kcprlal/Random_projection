@@ -23,9 +23,6 @@ def evaluate_distortion(X_original, X_projected):
 
 
 def distance_matrix(X):
-    """
-    Pełna macierz odległości NxN w czystym Pythonie.
-    """
     n = len(X)
     D = [[0 for _ in range(n)] for _ in range(n)]
 
@@ -96,8 +93,6 @@ def sparse_random_projection(X, k, s=3):
 
     return X_proj
 
-
-# ----- PRZYKŁAD DZIAŁANIA -----
 if __name__ == "__main__":
     X = generate_matrix(3,3)
     print(X)
