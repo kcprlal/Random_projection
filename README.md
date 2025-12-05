@@ -1,9 +1,5 @@
 # Random_projection
-> RANDOM PROJECTION Programmer:Kacper Lalik
->
-> Tester: Hubert Gąsior
-
-Introduction
+# Introduction
 
 The Random Projection algorithm is a technique forreducing the number of
 dimensions in a dataset by projectingthe datainto a lower-dimensional
@@ -13,17 +9,16 @@ distances between points. This means that the overall structure of the
 data is largely maintained, while the size of the dataset is reduced and
 computations become faster.
 
-Methods in package
+# Methods in package
 
-> euclidean_distance(self, x, y)
->
-> Method calculatesEuclidiandistance between two vectors x, y and
-> returns value.This measures how far apart two points are in the
-> original or projected space.
->
-> Parameters:
->
-> x, y–list of numerical values, two vectors
+## euclidean_distance(self, x, y)
+
+Method calculatesEuclidiandistance between two vectors x, y and
+returns value.This measures how far apart two points are in the
+original or projected space.
+
+Parameters:
+x, y–list of numerical values, two vectors
 >
 > distance_matrix(self, X):
 >
