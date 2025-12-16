@@ -2,6 +2,9 @@
 
 ## Introduction
 
+### Developer: Kacper Lalik
+### Tester: Hubert Gąsior
+
 The **Random Projection** algorithm is a technique for reducing the number of dimensions in a dataset by projecting the data into a lower-dimensional space. The new coordinates of the points are generated randomly; however, despite this randomness, the algorithm approximately preserves the distances between points.
 
 As a result, the overall structure of the data is largely maintained while the dataset size is reduced and computations become faster.
