@@ -78,6 +78,7 @@ class RandomProjection:
                     R[i][j] = -1
 
         R = self.scale_matrix(R, k)
+        R = [[element * math.sqrt(s) for element in column] for column in R]
 
         X_proj = []
         for row in X:
