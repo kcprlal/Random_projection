@@ -32,6 +32,9 @@ def test_gaussian_random_projection_large_vs_sklearn():
     d_sklearn = mean_pairwise_distance(X_proj_sklearn)
 
     rel_error = abs(d_custom - d_sklearn) / d_sklearn
+    print(f"\nCustom gaussian projection error: {d_custom}")
+    print(f"Scikit gaussian projection error: {d_sklearn}")
+    print(f"Relative error: {rel_error}")
     assert rel_error < 0.10
 
 
@@ -63,4 +66,7 @@ def test_sparse_random_projection_large_vs_sklearn():
     d_sklearn = mean_pairwise_distance(X_proj_sklearn)
 
     rel_error = abs(d_custom - d_sklearn) / d_sklearn
-    assert rel_error < 0.4
+    print(f"\nCustom sparse projection error: {d_custom}")
+    print(f"Scikit sparse projection error: {d_sklearn}")
+    print(f"Relative error: {rel_error}")
+    assert rel_error < 0.1
